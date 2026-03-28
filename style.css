@@ -1,0 +1,208 @@
+/* ============================================================
+   HK PHOTOGRAPHY — Global Stylesheet
+   ICT233 Web Technologies & Design, 2025/2026
+============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap');
+
+:root {
+  --black:       #0A0A0A;
+  --black-soft:  #111111;
+  --black-card:  #161616;
+  --black-mid:   #1E1E1E;
+  --gold:        #C9A84C;
+  --gold-light:  #E8C97A;
+  --gold-pale:   #F5E6C0;
+  --white:       #FFFFFF;
+  --off-white:   #F7F4EF;
+  --gray-light:  #E5E0D8;
+  --gray-mid:    #8A8580;
+  --gray-dark:   #3A3730;
+  --shadow-sm:   0 2px 12px rgba(0,0,0,.35);
+  --shadow-md:   0 8px 32px rgba(0,0,0,.45);
+  --shadow-gold: 0 4px 24px rgba(201,168,76,.18);
+  --radius:      4px;
+  --transition:  .3s ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Jost', sans-serif;
+  background: var(--black);
+  color: var(--off-white);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* ── UTILITIES ─────────────────────────────────────────────── */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
+
+.section-label {
+  font-size: .72rem; font-weight: 600; letter-spacing: .28em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  color: var(--white); line-height: 1.15; font-weight: 600;
+}
+.section-title em { color: var(--gold); font-style: italic; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 32px; font-size: .85rem; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  cursor: pointer; transition: var(--transition);
+  border: none; font-family: 'Jost', sans-serif;
+}
+.btn-gold {
+  background: var(--gold); color: var(--black);
+}
+.btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: var(--shadow-gold); }
+.btn-outline {
+  background: transparent; color: var(--gold);
+  border: 1px solid var(--gold);
+}
+.btn-outline:hover { background: var(--gold); color: var(--black); }
+.btn-white {
+  background: var(--white); color: var(--black);
+}
+.btn-white:hover { background: var(--off-white); transform: translateY(-2px); }
+
+/* ── NAVBAR ───────────────────────────────────────────────── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(10,10,10,.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201,168,76,.15);
+  transition: var(--transition);
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 28px; max-width: 1200px; margin: 0 auto;
+}
+.nav-logo {
+  display: flex; flex-direction: column; line-height: 1;
+}
+.nav-logo .logo-main {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem; font-weight: 700; color: var(--white);
+  letter-spacing: .06em;
+}
+.nav-logo .logo-main span { color: var(--gold); }
+.nav-logo .logo-sub {
+  font-size: .62rem; letter-spacing: .28em; text-transform: uppercase;
+  color: var(--gray-mid); margin-top: 2px;
+}
+.nav-links {
+  display: flex; align-items: center; gap: 2px; list-style: none;
+}
+.nav-links a {
+  padding: 8px 16px; font-size: .8rem; font-weight: 500;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--gray-mid); transition: var(--transition);
+}
+.nav-links a:hover, .nav-links a.active { color: var(--gold); }
+.nav-book {
+  background: var(--gold); color: var(--black) !important;
+  padding: 10px 22px !important; font-weight: 600 !important;
+}
+.nav-book:hover { background: var(--gold-light) !important; color: var(--black) !important; }
+
+.hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.hamburger span {
+  display: block; width: 22px; height: 1.5px;
+  background: var(--gold); transition: var(--transition);
+}
+
+/* ── MOBILE MENU ──────────────────────────────────────────── */
+.mobile-menu {
+  display: none; flex-direction: column;
+  background: var(--black-soft); padding: 16px 28px 24px;
+  border-top: 1px solid rgba(201,168,76,.12);
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  padding: 12px 0; font-size: .85rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--gray-mid);
+  border-bottom: 1px solid rgba(255,255,255,.05);
+  transition: var(--transition);
+}
+.mobile-menu a:hover { color: var(--gold); }
+
+/* ── FOOTER ───────────────────────────────────────────────── */
+footer {
+  background: var(--black-soft);
+  border-top: 1px solid rgba(201,168,76,.18);
+  padding: 64px 0 0;
+}
+.footer-grid {
+  display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 40px; padding-bottom: 48px;
+}
+.footer-brand .logo-main {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem; color: var(--white); font-weight: 700;
+  letter-spacing: .06em; margin-bottom: 12px;
+}
+.footer-brand .logo-main span { color: var(--gold); }
+.footer-brand p {
+  font-size: .88rem; color: var(--gray-mid);
+  line-height: 1.8; max-width: 280px;
+}
+.footer-col h4 {
+  font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 20px; font-weight: 600;
+}
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a {
+  font-size: .85rem; color: var(--gray-mid);
+  transition: var(--transition);
+}
+.footer-col ul li a:hover { color: var(--gold); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.06);
+  padding: 20px 0; text-align: center;
+  font-size: .78rem; color: var(--gray-mid); letter-spacing: .06em;
+}
+
+/* ── TOAST ────────────────────────────────────────────────── */
+#toast {
+  position: fixed; bottom: 28px; right: 28px; z-index: 9999;
+  background: var(--gold); color: var(--black);
+  padding: 14px 24px; font-size: .85rem; font-weight: 600;
+  letter-spacing: .06em;
+  transform: translateY(80px); opacity: 0; transition: .35s ease;
+  pointer-events: none;
+}
+#toast.show { transform: translateY(0); opacity: 1; }
+
+/* ── PAGE BANNER ──────────────────────────────────────────── */
+.page-banner {
+  padding: 140px 0 72px;
+  background: linear-gradient(180deg, var(--black-soft) 0%, var(--black) 100%);
+  border-bottom: 1px solid rgba(201,168,76,.12);
+  text-align: center;
+}
+.page-banner .section-title { font-size: clamp(2.4rem, 5vw, 3.8rem); }
+.page-banner p {
+  color: var(--gray-mid); font-size: 1rem; margin-top: 12px;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 680px) {
+  .nav-links, .nav-actions .btn-outline { display: none; }
+  .hamburger { display: flex; }
+  .footer-grid { grid-template-columns: 1fr; }
+}

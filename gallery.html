@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HK Photography — Gallery</title>
+    <style>
+  .gallery-section { padding: 72px 0 100px; }
+  .filter-bar {
+    display: flex; gap: 8px; flex-wrap: wrap;
+    margin-bottom: 48px; justify-content: center;
+  }
+  .fcat {
+    padding: 9px 24px; border: 1px solid rgba(201,168,76,.25);
+    background: transparent; color: var(--gray-mid);
+    font-family: 'Jost', sans-serif; font-size: .75rem;
+    letter-spacing: .14em; text-transform: uppercase;
+    cursor: pointer; transition: var(--transition);
+  }
+  .fcat:hover { border-color: var(--gold); color: var(--gold); }
+  .fcat.active { background: var(--gold); color: var(--black); border-color: var(--gold); }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .gallery-item {
+    position: relative; overflow: hidden; cursor: pointer;
+    background: var(--black-card); border: 1px solid rgba(201,168,76,.08);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 4rem; transition: var(--transition);
+  }
+  .gallery-item:hover { border-color: rgba(201,168,76,.4); transform: scale(1.01); }
+  .gallery-item.tall { grid-row: span 2; }
+  .gallery-item.wide { grid-column: span 2; }
+  .gi-inner { height: 240px; width: 100%; display: flex; align-items: center; justify-content: center; }
+  .gallery-item.tall .gi-inner { height: 492px; }
+  .gallery-item.wide .gi-inner { height: 240px; }
+  .gi-overlay {
+    position: absolute; inset: 0; background: rgba(0,0,0,.65);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    opacity: 0; transition: var(--transition);
+  }
+  .gallery-item:hover .gi-overlay { opacity: 1; }
+  .gi-overlay .gi-cat {
+    font-size: .68rem; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 8px;
+  }
+  .gi-overlay .gi-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem; color: var(--white);
+  }
+  .gi-overlay .gi-view {
+    margin-top: 16px; padding: 8px 20px;
+    border: 1px solid var(--gold); color: var(--gold);
+    font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+  }
+  .gallery-item.hidden { display: none; }
+
+  @media (max-width: 768px) {
+    .gallery-grid { grid-template-columns: repeat(2,1fr); }
+    .gallery-item.tall, .gallery-item.wide { grid-row: auto; grid-column: auto; }
+    .gallery-item.tall .gi-inner { height: 240px; }
+  }
+  @media (max-width: 480px) {
+    .gallery-grid { grid-template-columns: 1fr; }
+  }
+  </style>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="page-banner">
+  <p class="section-label">Our Work</p>
+  <h1 class="section-title">Photo <em>Gallery</em></h1>
+  <p>A curated selection of our finest photographic work.</p>
+</div>
+
+<section class="gallery-section">
+  <div class="container">
+    <div class="filter-bar">
+      <button class="fcat active" data-cat="all">All</button>
+      <button class="fcat" data-cat="wedding">Weddings</button>
+      <button class="fcat" data-cat="portrait">Portraits</button>
+      <button class="fcat" data-cat="event">Events</button>
+      <button class="fcat" data-cat="product">Products</button>
+      <button class="fcat" data-cat="nature">Nature</button>
+    </div>
+
+    <div class="gallery-grid" id="gallery-grid">
+      <div class="gallery-item tall reveal" data-cat="wedding" onclick="openLightbox('💒','Wedding Day — Kumasi, 2025')">
+        <div class="gi-inner">💒</div>
+        <div class="gi-overlay">
+          <span class="gi-cat">Wedding</span>
+          <span class="gi-title">Kumasi Wedding, 2025</span>
+          <span class="gi-view">View Photo</span>
+        </div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-1" data-cat="portrait" onclick="openLightbox('🎭','Executive Portrait')">
+        <div class="gi-inner">🎭</div>
+        <div class="gi-overlay">
+          <span class="gi-cat">Portrait</span><span class="gi-title">Executive Shoot</span><span class="gi-view">View Photo</span>
+        </div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-2" data-cat="event" onclick="openLightbox('🎉','Corporate Gala')">
+        <div class="gi-inner">🎉</div>
+        <div class="gi-overlay">
+          <span class="gi-cat">Event</span><span class="gi-title">Corporate Gala</span><span class="gi-view">View Photo</span>
+        </div>
+      </div>
+      <div class="gallery-item wide reveal" data-cat="wedding" onclick="openLightbox('💍','Engagement Session')">
+        <div class="gi-inner">💍</div>
+        <div class="gi-overlay">
+          <span class="gi-cat">Wedding</span><span class="gi-title">Engagement Session</span><span class="gi-view">View Photo</span>
+        </div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-1" data-cat="portrait" onclick="openLightbox('👨‍👩‍👧','Family Portrait')">
+        <div class="gi-inner">👨‍👩‍👧</div>
+        <div class="gi-overlay">
+          <span class="gi-cat">Portrait</span><span class="gi-title">Family Portrait</span><span class="gi-view">View Photo</span>
+        </div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-2" data-cat="event" onclick="openLightbox('🎓','Graduation Ceremony')">
+        <div class="gi-inner">🎓</div>
+        <div class="gi-overlay">
+          <span class="gi-cat">Event</span><span class="gi-title">Graduation — USTED</span><span class="gi-view">View Photo</span>
+        </div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-1" data-cat="product" onclick="openLightbox('📦','Product Shoot')">
+        <div class="gi-inner">📦</div>
+        <div class="gi-overlay">
+          <span class="gi-cat">Product</span><span class="gi-title">Brand Shoot</span><span class="gi-view">View Photo</span>
+        </div>
+      </div>
+      <div class="gallery-item tall reveal reveal-delay-2" data-cat="nature" onclick="openLightbox('🌅','Sunset Landscape')">
+        <div class="gi-inner">🌅</div>
+        <div class="gi-overlay">
+          <span class="gi-cat">Nature</span><span class="gi-title">Sunset Landscape</span><span class="gi-view">View Photo</span>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-cat="wedding" onclick="openLightbox('👗','Bridal Portraits')">
+        <div class="gi-inner">👗</div>
+        <div class="gi-overlay">
+          <span class="gi-cat">Wedding</span><span class="gi-title">Bridal Portraits</span><span class="gi-view">View Photo</span>
+        </div>
+      </div>
+      <div class="gallery-item reveal reveal-delay-1" data-cat="portrait" onclick="openLightbox('🌟','Celebrity Portrait')">
+        <div class="gi-inner">🌟</div>
+        <div class="gi-overlay">
+          <span class="gi-cat">Portrait</span><span class="gi-title">Celebrity Shoot</span><span class="gi-view">View Photo</span>
+        </div>
+      </div>
+      <div class="gallery-item wide reveal reveal-delay-2" data-cat="event" onclick="openLightbox('🎪','Cultural Festival')">
+        <div class="gi-inner">🎪</div>
+        <div class="gi-overlay">
+          <span class="gi-cat">Event</span><span class="gi-title">Cultural Festival</span><span class="gi-view">View Photo</span>
+        </div>
+      </div>
+      <div class="gallery-item reveal" data-cat="product" onclick="openLightbox('💄','Cosmetics Shoot')">
+        <div class="gi-inner">💄</div>
+        <div class="gi-overlay">
+          <span class="gi-cat">Product</span><span class="gi-title">Cosmetics Shoot</span><span class="gi-view">View Photo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:0 0 100px;">
+  <div class="container" style="text-align:center;">
+    <p style="color:var(--gray-mid);margin-bottom:24px;font-size:.9rem;">Interested in working with us?</p>
+    <a href="booking.html" class="btn btn-gold">Book a Session →</a>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.fcat').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.fcat').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.dataset.cat;
+      document.querySelectorAll('.gallery-item').forEach(item => {
+        if (cat === 'all' || item.dataset.cat === cat) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    });
+  });
+});
+</script>
+  <script src="main.js"></script>
+</body>
+</html>

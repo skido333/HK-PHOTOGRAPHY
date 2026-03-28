@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HK Photography — Contact Us</title>
+    <style>
+  .contact-section { padding: 80px 0 100px; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 64px; align-items: start; }
+  .contact-info h2 { font-family:'Cormorant Garamond',serif; font-size:2rem; color:var(--white); margin-bottom:12px; }
+  .contact-info > p { color:var(--gray-mid); font-size:.92rem; line-height:1.8; margin-bottom:36px; }
+  .info-items { display:flex; flex-direction:column; gap:24px; }
+  .info-item { display:flex; gap:16px; align-items:flex-start; }
+  .info-icon {
+    width:48px; height:48px; background:rgba(201,168,76,.1);
+    border:1px solid rgba(201,168,76,.2);
+    display:flex; align-items:center; justify-content:center;
+    font-size:1.2rem; flex-shrink:0;
+  }
+  .info-item strong { font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:4px; }
+  .info-item p { font-size:.88rem; color:var(--gray-mid); line-height:1.6; }
+  .social-links { display:flex; gap:12px; margin-top:36px; }
+  .social-link {
+    width:44px; height:44px; border:1px solid rgba(201,168,76,.2);
+    display:flex; align-items:center; justify-content:center; font-size:1.1rem;
+    transition:var(--transition);
+  }
+  .social-link:hover { background:var(--gold); border-color:var(--gold); }
+
+  .contact-form-wrap {
+    background:var(--black-card); border:1px solid rgba(201,168,76,.12);
+    padding:44px 40px;
+  }
+  .contact-form-wrap h3 { font-family:'Cormorant Garamond',serif; font-size:1.8rem; color:var(--white); margin-bottom:28px; }
+  .form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .form-group { display:flex; flex-direction:column; margin-bottom:20px; }
+  .form-group label { font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:8px; font-weight:600; }
+  .form-group input, .form-group select, .form-group textarea {
+    background:var(--black-mid); border:1px solid rgba(201,168,76,.15);
+    color:var(--off-white); padding:12px 16px; font-family:'Jost',sans-serif;
+    font-size:.9rem; outline:none; transition:var(--transition);
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color:var(--gold); background:var(--black-soft);
+  }
+  .form-group select option { background:var(--black-mid); }
+  .form-group textarea { resize:vertical; min-height:120px; }
+  .err { color:#E57373; font-size:.75rem; margin-top:4px; min-height:16px; }
+  .form-success {
+    display:none; align-items:flex-start; gap:16px;
+    background:rgba(201,168,76,.08); border:1px solid rgba(201,168,76,.3);
+    padding:24px;
+  }
+  .form-success span { font-size:2rem; }
+  .form-success strong { display:block; color:var(--gold); margin-bottom:4px; }
+  .form-success p { color:var(--gray-mid); font-size:.88rem; }
+
+  .map-section { padding:0 0 80px; }
+  .map-placeholder {
+    background:var(--black-card); border:1px solid rgba(201,168,76,.12);
+    min-height:300px; display:flex; align-items:center; justify-content:center;
+    flex-direction:column; gap:16px; text-align:center; padding:48px;
+  }
+  .map-placeholder span { font-size:3.5rem; }
+  .map-placeholder h3 { font-family:'Cormorant Garamond',serif; font-size:1.5rem; color:var(--white); }
+  .map-placeholder p { color:var(--gray-mid); font-size:.88rem; }
+
+  @media(max-width:860px){
+    .contact-grid{grid-template-columns:1fr;}
+    .form-row{grid-template-columns:1fr;}
+    .contact-form-wrap{padding:28px 20px;}
+  }
+  </style>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="page-banner">
+  <p class="section-label">Get In Touch</p>
+  <h1 class="section-title">Contact <em>Us</em></h1>
+  <p>Let's start a conversation about your photography needs.</p>
+</div>
+
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h2>We'd Love to Hear From You</h2>
+        <p>Whether you're planning a wedding, need corporate headshots, or just want to discuss ideas — reach out to us and we'll respond within 24 hours.</p>
+        <div class="info-items">
+          <div class="info-item"><div class="info-icon">📍</div><div><strong>Location</strong><p>Kumasi, Ashanti Region<br/>Ghana, West Africa</p></div></div>
+          <div class="info-item"><div class="info-icon">📞</div><div><strong>Phone</strong><p>+233 (0) 000 000 000</p></div></div>
+          <div class="info-item"><div class="info-icon">✉️</div><div><strong>Email</strong><p>info@hkphotography.com</p></div></div>
+          <div class="info-item"><div class="info-icon">🕐</div><div><strong>Working Hours</strong><p>Mon – Sat: 8:00 AM – 7:00 PM<br/>Sunday: By Appointment Only</p></div></div>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Instagram">📷</a>
+          <a href="#" class="social-link" aria-label="Facebook">👍</a>
+          <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
+          <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap reveal reveal-delay-1">
+        <h3>Send Us a Message</h3>
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name *</label>
+              <input type="text" id="fname" placeholder="Kwame" required/>
+              <span class="err" id="err-fname"></span>
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name *</label>
+              <input type="text" id="lname" placeholder="Asante" required/>
+              <span class="err" id="err-lname"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" placeholder="you@email.com" required/>
+            <span class="err" id="err-email"></span>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="+233 0XX XXX XXXX"/>
+          </div>
+          <div class="form-group">
+            <label for="service">Service of Interest</label>
+            <select id="service">
+              <option value="">Select a service...</option>
+              <option>Wedding Photography</option>
+              <option>Portrait Session</option>
+              <option>Event Photography</option>
+              <option>Product Photography</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" placeholder="Tell us about your project..." required></textarea>
+            <span class="err" id="err-msg"></span>
+          </div>
+          <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;">Send Message →</button>
+        </form>
+        <div class="form-success" id="form-success">
+          <span>✅</span>
+          <div><strong>Message Sent!</strong><p>Thank you for reaching out. We'll get back to you within 24 hours.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="map-section">
+  <div class="container">
+    <div class="map-placeholder">
+      <span>📍</span>
+      <h3>HK Photography Studio</h3>
+      <p>Kumasi, Ashanti Region, Ghana</p>
+      <a href="https://maps.google.com?q=Kumasi+Ghana" target="_blank" class="btn btn-outline" style="margin-top:8px;">Open in Google Maps →</a>
+    </div>
+  </div>
+</section>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  let valid = true;
+  const fname = document.getElementById('fname').value.trim();
+  const lname = document.getElementById('lname').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const msg   = document.getElementById('message').value.trim();
+  const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  document.getElementById('err-fname').textContent = fname ? '' : 'First name is required.';
+  document.getElementById('err-lname').textContent = lname ? '' : 'Last name is required.';
+  document.getElementById('err-email').textContent = email ? (emailOk ? '' : 'Enter a valid email.') : 'Email is required.';
+  document.getElementById('err-msg').textContent   = msg   ? '' : 'Please enter a message.';
+  if (!fname || !lname || !email || !emailOk || !msg) valid = false;
+
+  if (valid) {
+    this.style.display = 'none';
+    const s = document.getElementById('form-success');
+    s.style.display = 'flex';
+  }
+});
+</script>
+  <script src="main.js"></script>
+</body>
+</html>

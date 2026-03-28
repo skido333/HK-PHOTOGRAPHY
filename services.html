@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HK Photography — Services & Pricing</title>
+    <style>
+  .services-section { padding: 72px 0 100px; }
+  .services-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 32px; margin-top: 56px; }
+  .service-card {
+    background: var(--black-card); border: 1px solid rgba(201,168,76,.12);
+    padding: 40px 36px; transition: var(--transition); position: relative; overflow: hidden;
+  }
+  .service-card::before {
+    content: ''; position: absolute; top: 0; left: 0;
+    width: 3px; height: 0; background: var(--gold);
+    transition: .4s ease;
+  }
+  .service-card:hover::before { height: 100%; }
+  .service-card:hover { border-color: rgba(201,168,76,.35); transform: translateY(-4px); box-shadow: var(--shadow-gold); }
+  .svc-icon { font-size: 2.8rem; margin-bottom: 20px; display: block; }
+  .svc-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem; color: var(--white); margin-bottom: 12px;
+  }
+  .svc-desc { font-size: .9rem; color: var(--gray-mid); line-height: 1.8; margin-bottom: 24px; }
+  .svc-includes { list-style: none; margin-bottom: 28px; }
+  .svc-includes li {
+    font-size: .85rem; color: var(--off-white); padding: 6px 0;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    display: flex; gap: 10px; align-items: center;
+  }
+  .svc-includes li::before { content: '✦'; color: var(--gold); font-size: .6rem; flex-shrink: 0; }
+  .svc-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem; color: var(--gold); font-weight: 700;
+  }
+  .svc-price span { font-size: .85rem; color: var(--gray-mid); font-family: 'Jost', sans-serif; font-weight: 400; }
+
+  /* PRICING TABLE */
+  .pricing-section { padding: 0 0 100px; }
+  .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 56px; }
+  .pricing-card {
+    background: var(--black-card); border: 1px solid rgba(201,168,76,.12);
+    padding: 40px 28px; text-align: center; position: relative; transition: var(--transition);
+  }
+  .pricing-card.featured {
+    border-color: var(--gold); background: var(--black-mid);
+    transform: scale(1.04);
+  }
+  .pricing-card.featured .popular-badge {
+    position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+    background: var(--gold); color: var(--black);
+    padding: 4px 20px; font-size: .72rem; font-weight: 700;
+    letter-spacing: .14em; text-transform: uppercase; white-space: nowrap;
+  }
+  .pricing-card h3 {
+    font-size: .78rem; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 20px;
+  }
+  .pricing-amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.2rem; color: var(--white); font-weight: 700; line-height: 1;
+    margin-bottom: 6px;
+  }
+  .pricing-period { font-size: .8rem; color: var(--gray-mid); margin-bottom: 28px; }
+  .pricing-features { list-style: none; margin-bottom: 32px; }
+  .pricing-features li {
+    font-size: .85rem; color: var(--off-white); padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,.05);
+  }
+  .pricing-features li.disabled { color: var(--gray-mid); text-decoration: line-through; }
+
+  @media (max-width: 900px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .pricing-card.featured { transform: scale(1); }
+  }
+  </style>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="page-banner">
+  <p class="section-label">What We Offer</p>
+  <h1 class="section-title">Our <em>Services</em></h1>
+  <p>Professional photography services tailored to every occasion.</p>
+</div>
+
+<section class="services-section">
+  <div class="container">
+    <div class="reveal"><p class="section-label">Specialised Services</p><h2 class="section-title">What We <em>Photograph</em></h2></div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <span class="svc-icon">👰</span>
+        <h3 class="svc-title">Wedding Photography</h3>
+        <p class="svc-desc">Your wedding day is one of life's most precious moments. We capture every emotion, detail, and memory with artistry and discretion.</p>
+        <ul class="svc-includes">
+          <li>Full day coverage (up to 10 hours)</li>
+          <li>Two professional photographers</li>
+          <li>Engagement pre-shoot session</li>
+          <li>500+ edited high-resolution photos</li>
+          <li>Online gallery & USB delivery</li>
+          <li>Custom wedding album design</li>
+        </ul>
+        <div class="svc-price">GH₵ 2,500 <span>/ starting from</span></div>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <span class="svc-icon">🎭</span>
+        <h3 class="svc-title">Portrait Photography</h3>
+        <p class="svc-desc">From executive headshots to family portraits, we capture authentic expressions in a comfortable and professional setting.</p>
+        <ul class="svc-includes">
+          <li>2-hour studio or outdoor session</li>
+          <li>Professional lighting setup</li>
+          <li>Wardrobe consultation</li>
+          <li>50+ edited high-resolution photos</li>
+          <li>Online gallery delivery</li>
+          <li>Print-ready files included</li>
+        </ul>
+        <div class="svc-price">GH₵ 500 <span>/ starting from</span></div>
+      </div>
+      <div class="service-card reveal">
+        <span class="svc-icon">🎊</span>
+        <h3 class="svc-title">Event Photography</h3>
+        <p class="svc-desc">Birthdays, graduations, corporate dinners, cultural celebrations — we document your event with energy and precision.</p>
+        <ul class="svc-includes">
+          <li>Coverage up to 6 hours</li>
+          <li>Candid & formal photography</li>
+          <li>300+ edited photos delivered</li>
+          <li>48-hour turnaround available</li>
+          <li>Online gallery sharing</li>
+          <li>Optional video highlights</li>
+        </ul>
+        <div class="svc-price">GH₵ 1,200 <span>/ starting from</span></div>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <span class="svc-icon">📦</span>
+        <h3 class="svc-title">Product Photography</h3>
+        <p class="svc-desc">Elevate your brand with stunning product imagery designed for e-commerce, advertising, and social media.</p>
+        <ul class="svc-includes">
+          <li>Studio product shoot</li>
+          <li>White, black or custom backgrounds</li>
+          <li>Up to 20 products per session</li>
+          <li>Multiple angles per product</li>
+          <li>Colour-corrected final images</li>
+          <li>Commercial usage rights</li>
+        </ul>
+        <div class="svc-price">GH₵ 800 <span>/ starting from</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING TABLE -->
+<section class="pricing-section">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <p class="section-label">Choose Your Package</p>
+      <h2 class="section-title">Simple <em>Pricing</em></h2>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card reveal">
+        <h3>Basic</h3>
+        <div class="pricing-amount">GH₵ 500</div>
+        <p class="pricing-period">Per Session</p>
+        <ul class="pricing-features">
+          <li>2-Hour Session</li>
+          <li>1 Photographer</li>
+          <li>50 Edited Photos</li>
+          <li>Online Gallery</li>
+          <li class="disabled">Printed Album</li>
+          <li class="disabled">Same-Day Delivery</li>
+        </ul>
+        <a href="booking.html" class="btn btn-outline" style="width:100%;justify-content:center;">Book Basic</a>
+      </div>
+      <div class="pricing-card featured reveal reveal-delay-1">
+        <div class="popular-badge">Most Popular</div>
+        <h3>Premium</h3>
+        <div class="pricing-amount">GH₵ 1,500</div>
+        <p class="pricing-period">Per Session</p>
+        <ul class="pricing-features">
+          <li>Full Day Coverage</li>
+          <li>2 Photographers</li>
+          <li>300 Edited Photos</li>
+          <li>Online Gallery</li>
+          <li>Printed Album</li>
+          <li class="disabled">Same-Day Delivery</li>
+        </ul>
+        <a href="booking.html" class="btn btn-gold" style="width:100%;justify-content:center;">Book Premium</a>
+      </div>
+      <div class="pricing-card reveal reveal-delay-2">
+        <h3>Elite</h3>
+        <div class="pricing-amount">GH₵ 3,000</div>
+        <p class="pricing-period">Per Session</p>
+        <ul class="pricing-features">
+          <li>Full Day Coverage</li>
+          <li>3 Photographers</li>
+          <li>Unlimited Edited Photos</li>
+          <li>Online Gallery</li>
+          <li>Luxury Printed Album</li>
+          <li>Same-Day Delivery</li>
+        </ul>
+        <a href="booking.html" class="btn btn-outline" style="width:100%;justify-content:center;">Book Elite</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <script src="main.js"></script>
+</body>
+</html>

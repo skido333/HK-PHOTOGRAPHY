@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HK Photography — About Us</title>
+    <style>
+  .about-section { padding: 80px 0 100px; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 72px; align-items: center; margin-bottom: 100px; }
+  .about-visual {
+    position: relative;
+  }
+  .about-img-main {
+    background: var(--black-card); border: 1px solid rgba(201,168,76,.15);
+    height: 480px; display: flex; align-items: center; justify-content: center;
+    font-size: 8rem;
+  }
+  .about-img-badge {
+    position: absolute; bottom: -24px; right: -24px;
+    background: var(--gold); color: var(--black);
+    padding: 24px 28px; text-align: center;
+  }
+  .about-img-badge strong {
+    display: block; font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem; font-weight: 700; line-height: 1;
+  }
+  .about-img-badge span { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; }
+
+  .about-text .section-title { margin-bottom: 20px; }
+  .about-text p { color: var(--gray-mid); font-size: .95rem; line-height: 1.9; margin-bottom: 16px; }
+  .about-values { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+  .value-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    background: var(--black-card); padding: 16px; border-left: 2px solid var(--gold);
+  }
+  .value-item span { font-size: 1.3rem; flex-shrink: 0; }
+  .value-item p { font-size: .83rem; color: var(--gray-mid); margin: 0; }
+  .value-item strong { font-size: .88rem; color: var(--white); display: block; margin-bottom: 3px; }
+
+  /* TEAM */
+  .team-section { padding: 0 0 100px; }
+  .team-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; margin-top: 56px; }
+  .team-card {
+    background: var(--black-card); border: 1px solid rgba(201,168,76,.08);
+    text-align: center; overflow: hidden; transition: var(--transition);
+  }
+  .team-card:hover { border-color: rgba(201,168,76,.35); transform: translateY(-6px); }
+  .team-photo {
+    height: 220px; background: var(--black-mid);
+    display: flex; align-items: center; justify-content: center; font-size: 5rem;
+    border-bottom: 1px solid rgba(201,168,76,.1);
+  }
+  .team-info { padding: 24px 20px; }
+  .team-info h4 {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.2rem;
+    color: var(--white); margin-bottom: 4px;
+  }
+  .team-info p { font-size: .78rem; color: var(--gold); letter-spacing: .1em; text-transform: uppercase; }
+
+  /* MILESTONES */
+  .milestones { padding: 0 0 100px; }
+  .milestone-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; margin-top: 56px; }
+  .milestone-card {
+    text-align: center; padding: 40px 20px;
+    border: 1px solid rgba(201,168,76,.12); background: var(--black-card);
+  }
+  .milestone-card strong {
+    display: block; font-family: 'Cormorant Garamond', serif;
+    font-size: 3.2rem; color: var(--gold); font-weight: 700; line-height: 1; margin-bottom: 8px;
+  }
+  .milestone-card p { font-size: .82rem; color: var(--gray-mid); letter-spacing: .1em; text-transform: uppercase; }
+
+  @media (max-width: 900px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .about-img-badge { right: 0; }
+    .team-grid { grid-template-columns: repeat(2,1fr); }
+    .milestone-grid { grid-template-columns: repeat(2,1fr); }
+    .about-values { grid-template-columns: 1fr; }
+  }
+  </style>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="page-banner">
+  <p class="section-label">Who We Are</p>
+  <h1 class="section-title">About <em>HK Photography</em></h1>
+  <p>A passion for storytelling through the lens.</p>
+</div>
+
+<section class="about-section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-img-main">📸</div>
+        <div class="about-img-badge">
+          <strong>8+</strong>
+          <span>Years of Excellence</span>
+        </div>
+      </div>
+      <div class="about-text reveal reveal-delay-1">
+        <p class="section-label">Our Story</p>
+        <h2 class="section-title">Born From a <em>Passion</em> for Photography</h2>
+        <p>HK Photography was founded in Kumasi, Ghana, with one simple belief — that every moment deserves to be captured with beauty and intention. What began as a personal passion for visual storytelling has grown into one of Kumasi's most trusted photography studios.</p>
+        <p>Over eight years, we have had the privilege of documenting thousands of weddings, portraits, events, and brand stories for clients across Ghana and beyond. Every image we create is a testament to our commitment to artistry, professionalism, and genuine human connection.</p>
+        <p>We believe great photography is more than technical skill — it is about understanding people, building trust, and capturing authentic moments that will be treasured for generations.</p>
+        <div class="about-values">
+          <div class="value-item"><span>🎯</span><div><strong>Our Mission</strong><p>To deliver exceptional photography that exceeds client expectations.</p></div></div>
+          <div class="value-item"><span>🌟</span><div><strong>Our Vision</strong><p>To be West Africa's most respected photography brand.</p></div></div>
+          <div class="value-item"><span>🤝</span><div><strong>Integrity</strong><p>Honest, transparent service from booking to delivery.</p></div></div>
+          <div class="value-item"><span>✨</span><div><strong>Excellence</strong><p>Uncompromising quality in every frame we capture.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MILESTONES -->
+<section class="milestones">
+  <div class="container">
+    <div class="reveal" style="text-align:center;"><p class="section-label">By The Numbers</p><h2 class="section-title">Our <em>Achievements</em></h2></div>
+    <div class="milestone-grid">
+      <div class="milestone-card reveal"><strong>500+</strong><p>Projects Completed</p></div>
+      <div class="milestone-card reveal reveal-delay-1"><strong>8+</strong><p>Years Experience</p></div>
+      <div class="milestone-card reveal reveal-delay-2"><strong>1,200+</strong><p>Happy Clients</p></div>
+      <div class="milestone-card reveal reveal-delay-3"><strong>15+</strong><p>Awards Won</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team-section">
+  <div class="container">
+    <div class="reveal" style="text-align:center;"><p class="section-label">The People Behind The Lens</p><h2 class="section-title">Meet The <em>Team</em></h2></div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-photo">👨‍💼</div>
+        <div class="team-info"><h4>Mr. Henry Kofi</h4><p>Founder & Lead Photographer</p></div>
+      </div>
+      <div class="team-card reveal reveal-delay-1">
+        <div class="team-photo">👩‍🎨</div>
+        <div class="team-info"><h4>Ms. Akosua Mensah</h4><p>Creative Director</p></div>
+      </div>
+      <div class="team-card reveal reveal-delay-2">
+        <div class="team-photo">👨‍💻</div>
+        <div class="team-info"><h4>Mr. Kwame Asante</h4><p>Senior Photographer</p></div>
+      </div>
+      <div class="team-card reveal reveal-delay-3">
+        <div class="team-photo">👩‍💼</div>
+        <div class="team-info"><h4>Ms. Abena Darko</h4><p>Client Relations</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <script src="main.js"></script>
+</body>
+</html>
