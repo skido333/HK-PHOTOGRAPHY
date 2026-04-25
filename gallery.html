@@ -1,35 +1,121 @@
-<div class="gallery-item tall reveal" data-cat="wedding" 
-onclick="openLightbox('image12.png','Wedding Day — Kumasi, 2025')">
-  <div class="gi-inner">
-    <img src="image12.png" alt="Wedding Photo">
-  </div>
-  <div class="gi-overlay">
-    <span class="gi-cat">Wedding</span>
-    <span class="gi-title">Kumasi Wedding, 2025</span>
-    <span class="gi-view">View Photo</span>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HK Photography — Gallery</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+<div class="page-banner">
+  <p class="section-label">Our Work</p>
+  <h1 class="section-title">Photo <em>Gallery</em></h1>
+  <p>A curated selection of our finest photographic work.</p>
 </div>
 
-<div class="gallery-item reveal reveal-delay-1" data-cat="portrait" 
-onclick="openLightbox('image16.png','Executive Portrait')">
-  <div class="gi-inner">
-    <img src="image16.png" alt="Portrait">
-  </div>
-  <div class="gi-overlay">
-    <span class="gi-cat">Portrait</span>
-    <span class="gi-title">Executive Shoot</span>
-    <span class="gi-view">View Photo</span>
-  </div>
-</div>
+<section class="gallery-section">
+  <div class="container">
 
-<div class="gallery-item reveal reveal-delay-2" data-cat="event" 
-onclick="openLightbox('image3.png','Corporate Gala')">
-  <div class="gi-inner">
-    <img src="image3.png" alt="Event">
+    <div class="gallery-grid">
+
+      <!-- ITEM -->
+      <div class="gallery-item" onclick="openLightbox('image12.png','Wedding Day — Kumasi, 2025')">
+        <div class="gi-inner">
+          <img src="image12.png" alt="Wedding">
+        </div>
+        <div class="gi-overlay">
+          <span class="gi-cat">Wedding</span>
+          <span class="gi-title">Kumasi Wedding</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image16.png','Executive Portrait')">
+        <div class="gi-inner">
+          <img src="image16.png" alt="Portrait">
+        </div>
+        <div class="gi-overlay">
+          <span class="gi-cat">Portrait</span>
+          <span class="gi-title">Executive Shoot</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image3.png','Corporate Gala')">
+        <div class="gi-inner">
+          <img src="image3.png" alt="Event">
+        </div>
+        <div class="gi-overlay">
+          <span class="gi-cat">Event</span>
+          <span class="gi-title">Corporate Gala</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image27.png','Engagement Session')">
+        <div class="gi-inner">
+          <img src="image27.png" alt="Wedding">
+        </div>
+        <div class="gi-overlay">
+          <span class="gi-cat">Wedding</span>
+          <span class="gi-title">Engagement Session</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image30.png','Family Portrait')">
+        <div class="gi-inner">
+          <img src="image30.png" alt="Portrait">
+        </div>
+        <div class="gi-overlay">
+          <span class="gi-cat">Portrait</span>
+          <span class="gi-title">Family Portrait</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image19.png','Graduation Ceremony')">
+        <div class="gi-inner">
+          <img src="image19.png" alt="Event">
+        </div>
+        <div class="gi-overlay">
+          <span class="gi-cat">Event</span>
+          <span class="gi-title">Graduation</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image14.png','Product Shoot')">
+        <div class="gi-inner">
+          <img src="image14.png" alt="Product">
+        </div>
+        <div class="gi-overlay">
+          <span class="gi-cat">Product</span>
+          <span class="gi-title">Brand Shoot</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image10.png','Sunset Landscape')">
+        <div class="gi-inner">
+          <img src="image10.png" alt="Nature">
+        </div>
+        <div class="gi-overlay">
+          <span class="gi-cat">Nature</span>
+          <span class="gi-title">Sunset</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image25.png','Bridal Portraits')">
+        <div class="gi-inner">
+          <img src="image25.png" alt="Wedding">
+        </div>
+        <div class="gi-overlay">
+          <span class="gi-cat">Wedding</span>
+          <span class="gi-title">Bridal Portrait</span>
+        </div>
+      </div>
+
+    </div>
+
   </div>
-  <div class="gi-overlay">
-    <span class="gi-cat">Event</span>
-    <span class="gi-title">Corporate Gala</span>
-    <span class="gi-view">View Photo</span>
-  </div>
-</div>
+</section>
+
+<script src="main.js"></script>
+</body>
+</html>
