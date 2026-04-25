@@ -64,8 +64,8 @@
       <div class="footer-col">
         <h4>Contact</h4>
         <ul>
-          <li><a href="#">📍 Kumasi, Ghana</a></li>
-          <li><a href="tel:+233000000000">📞 +233 (0) 000 000 000</a></li>
+          <li><a href="#">📍 Pankrono-Estate,Kumasi</a></li>
+          <li><a href="tel:+233000000000">📞 +233 547187019</a></li>
           <li><a href="mailto:info@hkphotography.com">✉️ info@hkphotography.com</a></li>
           <li><a href="booking.html">📅 Book a Session</a></li>
         </ul>
@@ -74,7 +74,7 @@
   </div>
   <div class="footer-bottom">
     <div class="container">
-      © 2026 HK Photography · All Rights Reserved · ICT233 Web Technologies Project
+      © 2026 HK Photography · All Rights Reserved · HK Photography
     </div>
   </div>
 </footer>
